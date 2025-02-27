@@ -35,4 +35,11 @@ public class RomanNumeralTest {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+    @Test
+    public void numberWithAndWithoutSubtractiveNotation2() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("XLM");
+        Assertions.assertEquals(940, result);
+        //TODO FIX CODE M nicht vor X
+    }
 }
