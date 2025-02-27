@@ -21,6 +21,7 @@ public class RomanNumeral {
     public int convert(String s) {
 
         int convertedNumber = 0;
+        int[] allowedSubtratctions = new int[] {4, 9, 40, 90, 400, 900};
         for(int i = 0; i < s.length(); i++) {
             int currentNumber = map.get(s.charAt(i));
             int next = i+1 < s.length() ? map.get(s.charAt(i+1)) : 0;
