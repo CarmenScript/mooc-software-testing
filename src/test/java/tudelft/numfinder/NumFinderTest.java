@@ -31,5 +31,16 @@ class NumFinderTest {
         int result = nf.getSmallest();
         Assertions.assertEquals(-3, result);
     }
+    @Test
+    public void findBoth() {
+        int[] testlist = new int[] {1,1,1};
+        NumFinder nf = new NumFinder();
+        nf.find(testlist);
+        int result = nf.getSmallest();
+        int result2 = nf.getLargest();
+        Assertions.assertEquals(1, result);
+        Assertions.assertEquals(1, result2);
+        Assertions.assertEquals(result2, result);
+    }
 
 }
